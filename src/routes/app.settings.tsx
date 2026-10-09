@@ -37,7 +37,7 @@ function SettingsPage() {
         <div className="flex flex-col gap-4">
           <label className="flex flex-col gap-1.5 text-[13px] font-medium text-muted">
             Name
-            <input className="field" defaultValue="Aarav Sharma" />
+            <input className="field" defaultValue="Anjali Arya" />
           </label>
           <label className="flex flex-col gap-1.5 text-[13px] font-medium text-muted">
             Team

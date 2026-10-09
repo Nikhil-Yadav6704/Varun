@@ -73,11 +73,11 @@ function AppShell() {
         </nav>
         <div className="mt-auto flex items-center gap-2.5 border-t border-line pt-4">
           <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-cyan text-xs font-semibold text-bg">
-            AS
+            AA
           </span>
           <div className={open ? "" : "sm:hidden lg:block"}>
-            <div className="text-[13px] font-medium">Aarav Sharma</div>
-            <div className="text-[11px] text-faint">Team Lead</div>
+            <div className="text-[13px] font-medium">Anjali Arya</div>
+            <div className="text-[11px] text-faint">Frontend Developer / Team Leader</div>
           </div>
         </div>
       </aside>

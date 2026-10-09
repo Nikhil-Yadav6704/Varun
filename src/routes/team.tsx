@@ -13,12 +13,10 @@ export const Route = createFileRoute("/team")({
 });
 
 const members = [
-  ["Aarav Sharma", "Team Lead / ML Pipeline"],
-  ["Diya Patel", "GNN & Anomaly Detection"],
-  ["Kabir Mehta", "Diffusion Downscaling"],
-  ["Isha Nair", "Physics Validation (MetPy)"],
-  ["Rohan Verma", "Backend / REST API"],
-  ["Ananya Iyer", "Dashboard & GIS Visualization"],
+  ["Anjali Arya", "Frontend Developer / Team Leader"],
+  ["Sonu Saini", "Full Stack / ML Developer"],
+  ["Harsh Jangir", "AI/ML Designer"],
+  ["Nikhil Yadav", "API Integration / Backend developer"],
 ];
 
 function Team() {
