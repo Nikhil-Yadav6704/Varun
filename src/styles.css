@@ -1,0 +1,99 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --color-bg: var(--bg);
+  --color-raised: var(--bg-raised);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-fg: var(--text-primary);
+  --color-muted: var(--text-muted);
+  --color-faint: var(--text-faint);
+  --color-cyan: var(--accent-cyan);
+  --color-violet: var(--accent-violet);
+  --color-amber: var(--accent-amber);
+  --color-red: var(--accent-red);
+  --color-green: var(--accent-green);
+  --color-background: var(--bg);
+  --color-foreground: var(--text-primary);
+  --color-border: var(--border);
+}
+
+:root {
+  --bg: oklch(0.12 0.015 265);
+  --bg-raised: oklch(0.16 0.02 265);
+  --surface: oklch(1 0 0 / 0.045);
+  --surface-hover: oklch(1 0 0 / 0.075);
+  --border: oklch(1 0 0 / 0.1);
+  --border-strong: oklch(1 0 0 / 0.18);
+  --text-primary: oklch(1 0 0 / 0.94);
+  --text-muted: oklch(1 0 0 / 0.58);
+  --text-faint: oklch(1 0 0 / 0.36);
+  --accent-cyan: oklch(0.85 0.13 190);
+  --accent-violet: oklch(0.62 0.2 285);
+  --accent-amber: oklch(0.8 0.16 70);
+  --accent-red: oklch(0.66 0.22 22);
+  --accent-green: oklch(0.78 0.15 162);
+  --grid-line: oklch(0.85 0.13 190 / 0.08);
+}
+
+@layer base {
+  * { border-color: var(--border); }
+  html, body { background: var(--bg); color: var(--text-primary); font-family: var(--font-sans); overflow-x: hidden; }
+  h1, h2, h3 { font-family: var(--font-display); }
+}
+
+@utility radar-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@utility btn-primary {
+  background: var(--accent-cyan);
+  color: var(--bg);
+  font-weight: 600;
+  transition: filter 0.15s ease;
+  &:hover { filter: brightness(1.08); }
+}
+
+@utility btn-ghost {
+  border: 1px solid var(--border-strong);
+  transition: border-color 0.15s ease;
+  &:hover { border-color: var(--accent-cyan); }
+}
+
+@utility field {
+  width: 100%;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.15s ease;
+  &:focus { border-color: var(--accent-cyan); }
+}
+
+@keyframes spin-sweep { to { transform: rotate(360deg); } }
+@utility sweep { animation: spin-sweep 3s linear infinite; transform-origin: center; transform-box: fill-box; }
+
+@keyframes pulse-ring { 0% { opacity: 0.6; transform: scale(1); } 100% { opacity: 0; transform: scale(1.8); } }
+@utility pulse-ring { animation: pulse-ring 2s ease-out infinite; transform-origin: center; transform-box: fill-box; }
+
+@utility hazard-legend { background: linear-gradient(90deg, var(--accent-cyan), var(--accent-amber), var(--accent-red)); }
