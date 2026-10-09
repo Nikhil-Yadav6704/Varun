@@ -15,8 +15,10 @@ export const Route = createFileRoute("/team")({
 const members = [
   ["Anjali Arya", "Frontend Developer / Team Leader"],
   ["Sonu Saini", "Full Stack / ML Developer"],
+  ["Kumari Anushka", "Frontend Developer"],
   ["Harsh Jangir", "AI/ML Designer"],
-  ["Nikhil Yadav", "API Integration / Backend developer"],
+  ["Nikhil Yadav", "API Integration / Backend Developer"],
+  ["Vansh", "Researcher / Frontend Developer"],
 ];
 
 function Team() {
